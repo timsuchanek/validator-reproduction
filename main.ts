@@ -3,6 +3,7 @@ import { PrismaClient, Prisma } from '@prisma/client'
 async function main() {
   const prisma = new PrismaClient()
 
+  // this should not be allowed
   const select = Prisma.validator<Prisma.UserSelect>()({
     asd: true,
   })
